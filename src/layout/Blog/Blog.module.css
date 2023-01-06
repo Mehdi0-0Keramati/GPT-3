@@ -1,0 +1,101 @@
+.title {
+  margin: 10rem 0 3rem 8rem;
+  width: 50%;
+  font-size: 3rem;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "box01 box02 box03" "box01 box04 box05";
+  gap: 2rem;
+}
+
+.container .box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2rem;
+}
+
+.container .box .text {
+  padding: 1rem;
+  gap: 1rem;
+  background: #042c54;
+  height: 100%;
+}
+
+.container .box .text span {
+  font-size: 0.7rem;
+  line-height: 2rem;
+}
+
+.container .box .text h3 {
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.container .box img {
+  width: 100%;
+}
+
+.container .box:nth-child(1) {
+  grid-area: box01;
+}
+
+.container .box:nth-child(1) .text p {
+  margin-top: 18.5rem;
+}
+
+.container .box:nth-child(2) {
+  grid-area: box02;
+}
+
+.container .box:nth-child(3) {
+  grid-area: box03;
+}
+
+.container .box:nth-child(4) {
+  grid-area: box04;
+}
+
+.container .box:nth-child(5) {
+  grid-area: box05;
+}
+@media only screen and (max-width: 834px) {
+  .title {
+    width: 80%;
+    font-size: 2rem;
+    line-height: 40px;
+    margin: 3rem auto;
+  }
+  .container {
+    grid-template-areas:
+      "box01 box01 box01 box01"
+      "box02 box02 box03 box03"
+      "box04 box04 box05 box05";
+  }
+  .container .box .text h3 {
+    font-size: 1rem;
+  }
+  .container .box:nth-child(1) .text p {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    grid-template-areas:
+      "box01 box01 box01"
+      "box02 box02 box02"
+      "box03 box03 box03"
+      "box04 box04 box04"
+      "box05 box05 box05 ";
+  }
+}

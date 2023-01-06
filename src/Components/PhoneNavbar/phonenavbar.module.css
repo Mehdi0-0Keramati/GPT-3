@@ -1,0 +1,62 @@
+.phoneNavbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbaricon {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: snow;
+  cursor: pointer;
+}
+.navbar {
+  display: none;
+}
+.activeNavbar {
+  background-color: #292344;
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  display: block;
+  animation: anime 0.2s ease-in-out forwards;
+  transform: scale(0.7);
+}
+@keyframes anime {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.activeNavbar ul {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.activeNavbar ul li {
+  margin: 1rem 0;
+  list-style: none;
+}
+.activeNavbar ul li a {
+  color: snow;
+  text-decoration: none;
+}
+.activeNavbar .signin {
+  color: snow;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+.activeNavbar .signup {
+  padding: 0.7rem 1.6rem;
+  border-radius: 0.1rem;
+  color: snow;
+  background-color: #ff4820;
+  cursor: pointer;
+}

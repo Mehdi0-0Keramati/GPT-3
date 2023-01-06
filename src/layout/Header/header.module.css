@@ -1,0 +1,100 @@
+.container {
+  padding: 3rem 4rem;
+  width: 100%;
+  background-image: linear-gradient(to right bottom, #01254b, #041021, #01254b);
+}
+.container .header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .header .left {
+  margin-top: 3rem;
+  flex-basis: 60%;
+}
+.container .header .left h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.container .header .left p {
+  width: 90%;
+  color: #81afdd;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  margin: 2rem 0;
+}
+.container .header .left form {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.2rem;
+  background: #052d56;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.container .header .left form input {
+  background-color: transparent;
+  padding: 1rem;
+  flex-basis: 80%;
+}
+.container .header .left form button {
+  flex-basis: 20%;
+  height: 100%;
+  background-color: #ff4820;
+  color: snow;
+  cursor: pointer;
+}
+.container .header .left form input::placeholder {
+  color: #3d6184;
+}
+.container .header .left .people {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .header .right {
+  flex-basis: 40%;
+}
+.container .header .right img {
+  width: 100%;
+}
+@media only screen and (max-width: 924px) {
+  .container .header {
+    flex-direction: column;
+  }
+  .container .header .left {
+    order: 2;
+  }
+  .container .header .left h1 {
+    font-size: 2.7rem;
+  }
+  .container .header .left p {
+    font-size: 1.1rem;
+  }
+  .container .header .right {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .header .left h1 {
+    font-size: 2.2rem;
+  }
+  .container .header .left p {
+    font-size: 1rem;
+  }
+  .container .header .left .people {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container .header .left .people span {
+    font-size: 0.8rem;
+  }
+}

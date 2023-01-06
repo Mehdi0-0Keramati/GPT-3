@@ -1,0 +1,119 @@
+.container {
+  margin: 0 auto;
+  padding: 3rem;
+  width: 90%;
+  min-height: 38rem;
+  background: linear-gradient(to right bottom, #0d3f75, #042c54, #1972d3);
+  display: grid;
+  grid-template-rows: repeat(3, 9rem);
+  border-radius: 0.2rem;
+}
+.container .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.container .title h3 {
+  flex-basis: 30%;
+  font-weight: bolder;
+  position: relative;
+}
+.container .title h3::after {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  width: 10%;
+  height: 0.2rem;
+  background: linear-gradient(to right, rgb(151, 103, 151), pink);
+}
+.container .title p {
+  flex-basis: 70%;
+  color: #81afdd;
+  line-height: 30px;
+}
+.container .middle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.container .middle h2 {
+  font-size: 2.2rem;
+  flex-basis: 40%;
+}
+.container .middle h2,
+.container .middle p {
+  background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), #ffffff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container .box {
+  display: flex;
+}
+.container .box div {
+  flex-basis: 33%;
+  padding: 0.5rem;
+}
+.container .box div h3 {
+  font-size: 1.5rem;
+  line-height: 5rem;
+  position: relative;
+}
+.container .box div h3::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 10%;
+  height: 0.2rem;
+  background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), #ffffff;
+}
+.container .box div p {
+  width: 85%;
+  color: #81afdd;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+}
+@media only screen and (max-width: 834px) {
+  .container {
+    grid-template-rows: 15rem 15rem 40rem;
+  }
+  .container .title {
+    flex-direction: column;
+  }
+  .container .title p {
+    line-height: 25px;
+    margin-bottom: 2rem;
+  }
+  .container .box div p {
+    line-height: 22px;
+  }
+  .container .middle {
+    justify-content: center;
+    align-items: center;
+  }
+  .container .middle h2 {
+    flex-basis: 100%;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 834px) {
+  .container{
+    width: 94%;
+  }
+  .container .title p {
+    width: 70%;
+  }
+  .container .box {
+    flex-direction: column;
+  }
+
+  .container .middle {
+    margin-top: 6rem;
+  }
+  .container .middle h2 {
+    font-size: 1rem;
+  }
+}
